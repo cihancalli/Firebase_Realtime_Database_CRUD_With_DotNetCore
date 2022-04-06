@@ -1,0 +1,41 @@
+﻿@model FirebaseRealtimeDatabaseCRUD.Models.Notes
+@{
+    ViewData["Title"] = "Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Note Details</h2>
+<div>
+    <h4>Note with "@Model.note_id" IDs</h4>
+    <hr />
+    <dl>
+        <dt>
+            Lesson Name
+        </dt>
+        <dd>
+            @Model.lesson_name
+        </dd>
+
+        <dt>
+            Note 1
+        </dt>
+        <dd>
+            @Model.note1
+        </dd>
+
+        <dt>
+            Note 2
+        </dt>
+        <dd>
+            @Model.note2
+        </dd>
+
+
+    </dl>
+</div>
+
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.note_id }) |
+    @Html.ActionLink("Delete", "Delete", new { id = Model.note_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
